@@ -1,0 +1,10 @@
+@use 'src/styles/variables' as v;
+
+button {
+    border: none;
+    border-radius: 25px;
+    background-color: v.$green;
+    padding: 1rem;
+    color: white;
+    width: 150px;
+}

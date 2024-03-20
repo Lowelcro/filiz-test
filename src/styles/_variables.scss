@@ -1,0 +1,31 @@
+$bg-primary: #F9F9F9;
+$bg-secondary: #f3efea;
+
+$green: #71a894;
+
+$main: #303031;
+
+@font-face {
+    font-family: 'Nohemi-Medium';
+    src: url('public/fonts/Nohemi-Medium.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Nohemi-Bold';
+    src: url('public/fonts/Nohemi-Bold.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Nohemi-SemiBold';
+    src: url('public/fonts/Nohemi-SemiBold.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Proximanova-Medium';
+    src: url('public/fonts/Proximanova-Medium.otf') format('otf');
+}
+
+@font-face {
+    font-family: 'Proximanova-Bold';
+    src: url('public/fonts/Proximanova-Bold.otf') format('otf');
+}

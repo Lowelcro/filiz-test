@@ -1,0 +1,21 @@
+.Card {
+    width: 20%;
+    height: 400px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    gap: 2rem;
+    text-align: center;
+
+    &_Icon {
+        width: 90px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .Card {
+    width: 100%;
+    }
+}

@@ -1,0 +1,203 @@
+@use 'src/styles/variables' as v;
+
+.Section {
+    padding: 3rem;
+}
+
+.Section:nth-of-type(odd) {
+    background-color: v.$bg-primary;
+}
+
+.Section:nth-of-type(even) {
+    background-color: v.$bg-secondary;
+}
+
+.Section:first-child {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .Text_Content {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        h2 {
+            font-size: 3rem;
+        }
+
+        h2,
+        h3,
+        p {
+            margin-block-end: 2rem;
+        }
+    }
+
+    img {
+        transform: scale(75%);
+    }
+
+}
+
+.Section:nth-child(2) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 4rem;
+
+    .Text_Content {
+        height: 400px;
+        margin-block-start: 2rem;
+        margin-inline-end: 5rem;
+        margin-inline-start: 4rem;
+
+        h2 {
+            font-size: 3rem;
+        }
+
+        h2,
+        p {
+            margin-block-end: 2rem;
+        }
+    }
+}
+
+
+.Section:nth-child(3) {
+    h2 {
+        text-align: center;
+        font-size: 2rem;
+        margin-block-end: 2rem;
+        color: v.$green;
+    }
+
+    .Cards {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+    }
+}
+
+.Section:nth-child(4) {
+    display: flex;
+    gap: 1rem;
+
+    .Text_Content {
+        width: 50%;
+        padding: 1rem;
+
+        h2 {
+            font-size: 2rem;
+            margin-block-end: 1rem;
+        }
+    }
+
+    .Error {
+        color: red;
+    }
+
+    .Form {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        width: 50%;
+
+        &_Element {
+            display: flex;
+            flex-direction: column;
+
+            input {
+                border: none;
+                border-bottom: 1px solid black;
+                background-color: transparent;
+                margin-block-end: 1rem;
+                margin-inline-end: 1rem;
+                height: 1.5rem;
+                padding: .5rem;
+            }
+        }
+
+        button {
+            grid-column-start: 2;
+            justify-self: end;
+        }
+
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .Section:first-child {
+        flex-direction: column;
+        text-align: center;
+
+        img {
+            transform: scale(50%);
+        }
+
+        button {
+            align-self: center;
+        }
+
+    }
+
+    .Section:nth-child(2) {
+        flex-direction: column-reverse;
+
+        padding: 0;
+
+        img {
+            transform: scale(75%);
+            margin: 2rem;
+        }
+    }
+
+
+    .Section:nth-child(3) {
+        display: flex;
+        flex-direction: column;
+
+        .Cards {
+            flex-direction: column;
+        }
+    }
+
+    .Section:nth-child(4) {
+        flex-direction: column;
+        gap: 2rem;
+
+        .Text_Content {
+            width: 100%;
+            padding: 0;
+        }
+
+        .Form {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            gap: 1rem;
+
+            &_Element {
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+
+                input {
+                    border: none;
+                    border-bottom: 1px solid black;
+                    background-color: transparent;
+                    margin-block-end: 1rem;
+                    margin-inline-end: 1rem;
+                }
+            }
+
+            button {
+                grid-column-start: 2;
+                align-self: end;
+            }
+
+        }
+    }
+}

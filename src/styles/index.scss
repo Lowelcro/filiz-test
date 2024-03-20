@@ -1,0 +1,6 @@
+@use 'src/styles/reset';
+@use 'src/styles/variables' as v;
+
+* {
+    color: v.$main;
+}
